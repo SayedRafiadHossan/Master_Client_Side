@@ -16,7 +16,7 @@ const Details = () => {
   }, [id]);
   return (
     <div>
-      <section className="w-[60%] mx-auto border-2 p-5 mt-10">
+      <section className="lg:w-[60%] mx-auto border-2 p-5 mt-10">
         <img
           className="mx-auto w-full h-[550px]"
           src={SingleCourse.img}

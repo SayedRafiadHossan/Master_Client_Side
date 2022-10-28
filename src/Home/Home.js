@@ -5,11 +5,11 @@ import img1 from "../Images/92377-quiz-mode.gif";
 const Home = () => {
   return (
     <nav>
-      <div>
-        <div className="md:flex justify-center items-center m-10 h-screen">
+      <div className="pb-5 lg:pb-0">
+        <div className="md:flex justify-center items-center m-10 lg:h-screen">
           <div className="md:w-[60%] mr-12 p-10 pt-20">
             <h1 className="text-6xl font-extrabold dark:text-white">
-              Free online courses to achieve your goals
+              Free online courses to achieve your goals.
             </h1>
             <Link
               to="/courses"
