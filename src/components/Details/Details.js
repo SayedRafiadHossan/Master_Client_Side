@@ -27,11 +27,17 @@ const Details = () => {
           <p className="mb-3">{SingleCourse.details}</p>
           <div>
             <p className="font-bold mb-3">Price : {SingleCourse.price}</p>
-            <Link to={`/premiumAcess/${id}`}>
+            <div className="flex justify-between">
+              {" "}
+              <Link to={`/premiumAcess/${id}`}>
+                <button className="p-2 rounded-md bg-red-600 text-white">
+                  Premium
+                </button>
+              </Link>
               <button className="p-2 rounded-md bg-red-600 text-white">
-                Premium
+                Download
               </button>
-            </Link>
+            </div>
           </div>
         </div>
       </section>
