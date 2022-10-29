@@ -20,6 +20,7 @@ const RightSide = () => {
         <>
           {SingleCourse.map((c) => (
             <Link
+              key={SingleCourse.indexOf(c)}
               to={`/details/${c.id}`}
               className="m-4 text-lg font-bold bg-cyan-100 rounded-lg p-3 block"
             >

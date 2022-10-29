@@ -8,7 +8,6 @@ import useAuth from "../components/Share/useAuth";
 const Header = () => {
   const [toggle, setToggole] = useState(false);
   const { user, logout } = useAuth();
-  console.log(user);
   return (
     <div>
       <div className="navbar bg-slate-100 ">

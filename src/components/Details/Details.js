@@ -7,7 +7,6 @@ const Details = () => {
   const { id } = useParams();
 
   const [SingleCourse, setSingleCourse] = useState([]);
-  console.log(SingleCourse);
 
   useEffect(() => {
     fetch(`http://localhost:5000/courses/${id}`)
