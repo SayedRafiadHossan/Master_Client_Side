@@ -8,13 +8,10 @@ const handleSignup = (name, email, password, photo, registerUser, navigate) => {
   registerUser(email, password, name, navigate, photo);
 };
 
-//google
-
 const handelGoogleSignUp = (signInWithGoogle, location, navigate) => {
   signInWithGoogle(location, navigate);
 };
 
-//github
 const handleGithubSignUp = (githubSignIn, location, navigate) => {
   githubSignIn(location, navigate);
 };
