@@ -19,9 +19,12 @@ const RightSide = () => {
       {user.photoURL && (
         <>
           {SingleCourse.map((c) => (
-            <p className="m-4 text-lg font-bold bg-cyan-100 rounded-lg p-3">
-              <Link to={`/details/${c.id}`}>{c.title}</Link>
-            </p>
+            <Link
+              to={`/details/${c.id}`}
+              className="m-4 text-lg font-bold bg-cyan-100 rounded-lg p-3 block"
+            >
+              {c.title}
+            </Link>
           ))}
         </>
       )}
