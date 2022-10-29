@@ -16,7 +16,7 @@ const PremiumAcess = () => {
   }, [id]);
   return (
     <div>
-      <div className="lg:flex lg:w-[70%] mx-auto shadow-2xl mt-20 mb-56">
+      <div className="lg:flex lg:w-[70%] mx-auto shadow-2xl mt-20 mb-56 m-5">
         <div className="lg:w-[75%]">
           <img className="w-full" src={SingleCourse.img} alt="" />
         </div>
