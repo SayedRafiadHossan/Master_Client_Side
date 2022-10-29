@@ -109,10 +109,10 @@ const Login = () => {
                       </div>
                     </>
                   )}
-                  {user?.photoURL &&
+                  {/* {user?.photoURL &&
                     toast.success("Successfully Login", {
                       theme: "colored",
-                    })}
+                    })} */}
                 </>
 
                 {authError && (

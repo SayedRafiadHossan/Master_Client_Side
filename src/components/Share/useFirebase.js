@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { toast } from "react-toastify";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -51,12 +51,13 @@ const useFirebase = () => {
   };
 
   const signInWithGoogle = (location, navigate) => {
+    toast.info("Signing In", {
+      theme: "colored",
+    });
     setIsLoading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
-        console.log(user);
-
         setAuthError("");
         const destination = location?.state?.from || "/courses";
         navigate(destination);
@@ -68,6 +69,9 @@ const useFirebase = () => {
   };
 
   const githubSignIn = (location, navigate) => {
+    toast.info("Signing In", {
+      theme: "colored",
+    });
     setIsLoading(true);
     signInWithPopup(auth, gitProvider)
       .then((result) => {
@@ -75,6 +79,7 @@ const useFirebase = () => {
         const token = credential.accessToken;
 
         const user = result.user;
+
         setAuthError("");
         const destination = location?.state?.from || "/courses";
         navigate(destination);
@@ -82,10 +87,15 @@ const useFirebase = () => {
       .catch((error) => {
         setAuthError(error.message);
       })
-      .finally(() => setIsLoading(false));
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const loginUser = (email, password, location, navigate) => {
+    toast.info("Signing In", {
+      theme: "colored",
+    });
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -112,7 +122,12 @@ const useFirebase = () => {
   }, [auth]);
 
   const logout = () => {
+    toast.info("Logged Out", {
+      theme: "colored",
+      autoClose: 2000,
+    });
     setIsLoading(true);
+    localStorage.removeItem("toast-fix");
     signOut(auth)
       .then(() => {})
       .catch((error) => {})
