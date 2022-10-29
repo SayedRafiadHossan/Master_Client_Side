@@ -11,10 +11,10 @@ const Header = () => {
   return (
     <div>
       <div className="navbar bg-slate-100 ">
-        <div className="flex-1">
+        <Link to="/" className="flex-1">
           <img src={img1} className="mr-3 h-6 sm:h-10" alt="..." />
           <div className="text-xl">Master-Study</div>
-        </div>
+        </Link>
         <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
           <ul className="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700 mr-10">
             {user?.photoURL ? (
