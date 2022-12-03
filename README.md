@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Live Link - [Create React App](https://github.com/facebook/create-react-app).
+Project - [Live Link](https://serene-sorbet-a43ed9.netlify.app/).
 
 ## I havae use this project
 
